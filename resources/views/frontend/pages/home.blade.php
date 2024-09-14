@@ -37,18 +37,18 @@
             <div class="row text-light">
                 <div class="col-lg-4 text-center p-5" data-aos="zoom-in">
                     <i class="fas fa-tachometer-alt fa-3x p-2"></i>
-                    <h4 class="py-3">Download 1 GBPS</h4>
-                    <p class="para-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam odit consequatur doloribus natus in suscipit!</p>
+                    <h4 class="py-3">Download Lightning Speed</h4>
+                    <p class="para-light">Download Lightning Speed for fast, efficient, and seamless file transfers</p>
                 </div>
                 <div class="col-lg-4 text-center p-5"  data-aos="zoom-in">
                     <i class="fas fa-clock fa-3x p-2"></i>
                     <h4 class="py-3">99% Internet Uptime</h4>
-                    <p class="para-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam odit consequatur doloribus natus in suscipit!</p>
+                    <p class="para-light">Internet uptime ensures continuous connectivity, reliability, productivity, and seamless access</p>
                 </div>
                 <div class="col-lg-4 text-center p-5 text-dark"  data-aos="zoom-in">
                     <i class="fas fa-headset fa-3x p-2"></i>
                     <h4 class="py-3">24/7 Support </h4>
-                    <p class="para-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam odit consequatur doloribus natus in suscipit!</p>
+                    <p class="para-light">24/7 support provides round-the-clock assistance for any urgent needs</p>
                 </div>
             </div>
         </div> <!-- end of container -->
@@ -62,15 +62,19 @@
                 <div class="col-lg-7" data-aos="fade-right">
                     <p>ABOUT US</p>
                     <h1>We are top internet <br> service company</h1>
-                    <p class="py-2 para-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non sed accusantium aut dolores inventore architecto modi cupiditate eligendi corporis, illum illo culpa. Reiciendis, molestias. Illum voluptatum quisquam ad veritatis dolorem.</p>
-                    <p class="py-2 para-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non sed accusantium aut dolores inventore architecto modi cupiditate eligendi corporis, illum illo culpa. Reiciendis, molestias. Illum voluptatum quisquam ad veritatis dolorem.</p>
+                    <p class="py-2 para-light">
+                        We are a top internet service company, dedicated to providing high-speed and reliable connectivity to our customers. With cutting-edge technology and a commitment to excellence, we ensure a seamless online experience.
+                    </p>
+                    <p class="py-2 para-light">
+                        Our team offers 24/7 support to address any issues promptly, ensuring minimal downtime. Choose us for unmatched service, reliability, and the fastest internet speeds available.
+                    </p>
 
-                    <div class="my-3">
+                    {{-- <div class="my-3">
                         <a class="btn" href="#your-link">Learn More</a>
-                    </div>
+                    </div> --}}
                 </div>
                 <div class="col-lg-5 text-center py-4 py-sm-0" data-aos="fade-down">
-                    <img class="img-fluid" src="./assets/images/about.jpg" alt="about" >
+                    <img class="img-fluid" src="{{ asset('frontend/assets/images/about.jpg') }}" alt="about" >
                 </div>
             </div> <!-- end of row -->
         </div> <!-- end of container -->
@@ -83,49 +87,63 @@
             <div class="text-center pb-4" >
                 <p>OUR SERVICES</p>
                 <h2 class="py-2">Explore unlimited possibilities</h2>
-                <p class="para-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae asperiores, quia accusantium sunt corporis optio recusandae? Nostrum libero pariatur cumque, ipsa dolores voluptatibus voluptate alias sit fuga. Itaque, ea quo.</p>
+                <p class="para-light">
+                    Our services provide high-speed internet, 24/7 customer support, and reliable connectivity for homes and businesses. We offer tailored plans to meet diverse needs, ensuring fast, secure, and uninterrupted service to enhance your online experience with a focus on reliability and satisfaction.
+                </p>
             </div>
             <div class="row gy-4 py-2" data-aos="zoom-in">
                 <div class="col-lg-4">
                     <div class="card bg-transparent">
                         <i class="fas fa-home fa-2x"></i>
                         <h4 class="py-2">HOME BROADBAND</h4>
-                        <p class="para-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam odit consequatur doloribus natus in suscipit!</p>
+                        <p class="para-light">
+                            Enjoy fast, reliable internet connections with unlimited data for seamless browsing, streaming, and gaming experiences.
+                        </p>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="card bg-transparent">
                         <i class="fas fa-wifi fa-2x"></i>
                         <h4 class="py-2"> HOME WIFI</h4>
-                        <p class="para-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam odit consequatur doloribus natus in suscipit!</p>
+                        <p class="para-light">
+                            We provide expert installation and optimization for your home network, ensuring maximum coverage and speed.
+                        </p>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="card bg-transparent">
-                        <i class="fas fa-phone fa-2x"></i>
-                        <h4 class="py-2">HOME BROADBAND</h4>
-                        <p class="para-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam odit consequatur doloribus natus in suscipit!</p>
+                        <i class="fas fa-network-wired fa-2x"></i>
+                        <h4 class="py-2">BUSINESS SOLUTION</h4>
+                        <p class="para-light">
+                            Tailored internet plans designed to meet the high demands of businesses for efficient, uninterrupted operations.
+                        </p>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="card bg-transparent">
-                        <i class="fas fa-mobile fa-2x"></i>
-                        <h4 class="py-2">MOBILE CONNECTION</h4>
-                        <p class="para-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam odit consequatur doloribus natus in suscipit!</p>
+                        <i class="fas fa-shield-alt fa-2x"></i>
+                        <h4 class="py-2">SECURE CONNECTION</h4>
+                        <p class="para-light">
+                            Keep your network safe with our advanced security features, protecting against potential cyber threats.
+                        </p>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="card bg-transparent">
-                        <i class="fas fa-home fa-2x"></i>
-                        <h4 class="py-2">SECURITY</h4>
-                        <p class="para-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam odit consequatur doloribus natus in suscipit!</p>
+                        <i class="fas fa-ethernet fa-2x"></i>
+                        <h4 class="py-2">HIGH SPEED INTERNET</h4>
+                        <p class="para-light">
+                            Enjoy fast, internet connections with unlimited data for browsing, streaming, and gaming experiences.
+                        </p>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="card bg-transparent">
-                        <i class="fas fa-tv fa-2x"></i>
-                        <h4 class="py-2">TV SETUP BOX</h4>
-                        <p class="para-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam odit consequatur doloribus natus in suscipit!</p>
+                        <i class="fas fa-cubes fa-2x"></i>
+                        <h4 class="py-2">FLEXIBLE DATA PLANS</h4>
+                        <p class="para-light">
+                            Choose from a variety of customizable data plans to match your internet usage and budget needs.
+                        </p>
                     </div>
                 </div>
             </div> <!-- end of row -->
@@ -139,7 +157,9 @@
             <div class="text-center pb-4">
                 <p>OUR PLANS</p>
                 <h2 class="py-2">Explore unlimited possibilities</h2>
-                <p class="para-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae asperiores, quia accusantium sunt corporis optio recusandae? Nostrum libero pariatur cumque, ipsa dolores voluptatibus voluptate alias sit fuga. Itaque, ea quo.</p>
+                <p class="para-light">
+                    Our data packages offer flexible, high-speed internet plans tailored to your needs. Enjoy unlimited data options with competitive pricing, ensuring seamless browsing, streaming, and online activities.
+                </p>
             </div>
             <div class="row gy-4" data-aos="zoom-in">
                 <div class="col-lg-4">
@@ -227,172 +247,7 @@
     </section> <!-- end of plans -->
 
 
-    <!-- Work -->
-    <section class="work d-flex align-items-center py-5" >
-        <div class="container-fluid text-light">
-            <div class="row">
-                <div class="col-lg-6 d-flex align-items-center" data-aos="fade-right">
-                    <img class="img-fluid" src="./assets/images/work.jpg" alt="work">
-                </div>
-                <div class="col-lg-5 d-flex align-items-center px-4 py-3" data-aos="">
-                    <div class="row">
-                        <div class="text-center text-lg-start py-4 pt-lg-0">
-                            <p>OUR WORK</p>
-                            <h2 class="py-2">Explore unlimited possibilities</h2>
-                            <p class="para-light">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos dicta mollitia totam explicabo obcaecati quia laudantium repudiandae.</p>
-                        </div>
-                        <div class="container" data-aos="fade-up">
-                            <div class="row g-5">
-                                <div class="col-6 text-start" >
-                                    <i class="fas fa-briefcase fa-2x text-start"></i>
-                                    <h2 class="purecounter" data-purecounter-start="0" data-purecounter-end="1258" data-purecounter-duration="3">1</h2>
-                                    <p>PROJECTS COMPLETED</p>
-                                </div>
-                                <div class="col-6" >
-                                    <i class="fas fa-award fa-2x"></i>
-                                    <h2 class="purecounter" data-purecounter-start="0" data-purecounter-end="150" data-purecounter-duration="3">1</h2>
-                                    <p>AWARDS</p>
-                                </div>
-                                <div class="col-6">
-                                    <i class="fas fa-users fa-2x"></i>
-                                    <h2 class="purecounter" data-purecounter-start="0" data-purecounter-end="1255" data-purecounter-duration="3">1</h2>
-                                    <p>CUSTOMER ACTIVE</p>
-                                </div>
-                                <div class="col-6">
-                                    <i class="fas fa-clock fa-2x"></i>
-                                    <h2 class="purecounter" data-purecounter-start="0" data-purecounter-end="1157" data-purecounter-duration="3">1</h2>
-                                    <p>GOOD REVIEWS</p>
-                                </div>
-                            </div>
-                        </div> <!-- end of container -->
-                    </div> <!-- end of row -->
-                </div> <!-- end of col-lg-5 -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </section> <!-- end of work -->
 
-
-    <!-- Testimonials -->
-    <div class="slider-1 testimonial text-light d-flex align-items-center">
-        <div class="container">
-            <div class="row">
-                <div class="text-center w-lg-75 m-auto pb-4">
-                    <p>TESTIMONIALS</p>
-                    <h2 class="py-2">What Our Clients Says</h2>
-                    <p class="para-light">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci esse facilis vel, neque ipsa mollitia impedit, commodi ab illo dignissimos, voluptatum quae amet sed tenetur dolores reprehenderit laudantium quo sint.</p>
-                </div>
-            </div> <!-- end of row -->
-            <div class="row p-2" data-aos="zoom-in">
-                <div class="col-lg-12">
-
-                    <!-- Card Slider -->
-                    <div class="slider-container">
-                        <div class="swiper-container card-slider">
-                            <div class="swiper-wrapper">
-
-                                <!-- Slide -->
-                                <div class="swiper-slide">
-                                    <div class="testimonial-card p-4">
-                                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam commodi officia laborum qui iste quidem!</p>
-
-                                        <div class="d-flex pt-4">
-                                            <div>
-                                                <img class="avatar" src="./assets/images/testimonial-1.jpg" alt="testimonial">
-                                            </div>
-                                            <div class="ms-3 pt-2">
-                                                <h6>Marlene Visconte</h6>
-                                                <p>General Manager - Scouter</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> <!-- end of swiper-slide -->
-                                <!-- end of slide -->
-
-                                <!-- Slide -->
-                                <div class="swiper-slide">
-                                    <div class="testimonial-card p-4">
-                                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam commodi officia laborum qui iste quidem!</p>
-                                        <div class="d-flex pt-4">
-                                            <div>
-                                                <img class="avatar" src="./assets/images/testimonial-2.jpg" alt="testimonial">
-                                            </div>
-                                            <div class="ms-3 pt-2">
-                                                <h6>John Spiker</h6>
-                                                <p>Team Leader - Vanquish</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> <!-- end of swiper-slide -->
-                                <!-- end of slide -->
-
-                                <!-- Slide -->
-                                <div class="swiper-slide">
-                                    <div class="testimonial-card p-4">
-                                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam commodi officia laborum qui iste quidem!</p>
-                                        <div class="d-flex pt-4">
-                                            <div>
-                                                <img class="avatar" src="./assets/images/testimonial-3.jpg" alt="testimonial">
-                                            </div>
-                                            <div class="ms-3 pt-2">
-                                                <h6>Stella Virtuoso</h6>
-                                                <p>Design Chief - Upscale</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> <!-- end of swiper-slide -->
-                                <!-- end of slide -->
-
-                                <!-- Slide -->
-                                <div class="swiper-slide">
-                                    <div class="testimonial-card p-4">
-                                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam commodi officia laborum qui iste quidem!</p>
-                                        <div class="d-flex pt-4">
-                                            <div>
-                                                <img class="avatar" src="./assets/images/testimonial-4.jpg" alt="testimonial">
-                                            </div>
-                                            <div class="ms-3 pt-2">
-                                                <p>Mike tim</p>
-                                                <p>Investor - TechGroww</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> <!-- end of swiper-slide -->
-                                <!-- end of slide -->
-
-                            </div> <!-- end of swiper-wrapper -->
-
-                            <!-- Add Arrows -->
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
-                            <!-- end of add arrows -->
-
-                        </div> <!-- end of swiper-container -->
-                    </div> <!-- end of slider-container -->
-                    <!-- end of card slider -->
-
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of testimonials -->
-
-
-    <!-- Newsletter -->
-    <section class="newsletter text-light py-5">
-        <div class="container">
-            <div class="row" >
-                <div class="col-lg-6 text-center text-lg-start" data-aos="fade-right">
-                    <h4 class="py-1">Subscribe to our Newsletter</h4>
-                    <p class="para-light">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor deleniti nobis amet accusamus debitis facilis quibusdam officia laborum nesciunt. Nihil.</p>
-                </div>
-                <div class="col-lg-6 d-flex align-items-center" data-aos="fade-down">
-                    <div class="input-group my-3">
-                        <input type="text" class="form-control p-2" placeholder="Enter your email address" aria-label="Recipient's email">
-                        <button class="btn-secondary text-light" type="button">Subscribe</button>
-                    </div>
-                </div>
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </section> <!-- end of newsletter -->
 
 
     <!-- Contact -->
@@ -404,21 +259,23 @@
                         <div class="text-center text-lg-start py-4 pt-lg-0">
                             <p>CONTACT</p>
                             <h2 class="py-2">Send your query</h2>
-                            <p class="para-light">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos dicta mollitia totam explicabo obcaecati quia laudantium repudiandae.</p>
+                            <p class="para-light">
+                                Complete this form to request a new internet connection for your home.
+                            </p>
                         </div>
                         <div>
-                            <div class="row" >
-                                <div class="col-lg-6">
-                                    <div class="form-group py-2">
-                                        <input type="text" class="form-control form-control-input" id="exampleFormControlInput1" placeholder="Enter name">
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="form-group py-2">
-                                        <input type="email" class="form-control form-control-input" id="exampleFormControlInput2" placeholder="Enter phone number">
-                                    </div>
-                                </div>
+
+
+                            <div class="form-group py-2">
+                                <input type="text" class="form-control form-control-input" id="exampleFormControlInput1" placeholder="Enter name">
                             </div>
+
+
+                            <div class="form-group py-2">
+                                <input type="email" class="form-control form-control-input" id="exampleFormControlInput2" placeholder="Enter phone number">
+                            </div>
+
+
                             <div class="form-group py-1">
                                 <input type="email" class="form-control form-control-input" id="exampleFormControlInput3" placeholder="Enter email">
                             </div>
@@ -432,7 +289,7 @@
                     </div> <!-- end of div -->
                 </div> <!-- end of col -->
                 <div class="col-lg-6 d-flex align-items-center" data-aos="fade-down">
-                    <img class="img-fluid d-none d-lg-block" src="./assets/images/contact.jpg" alt="contact">
+                    <img class="img-fluid d-none d-lg-block" src="{{ asset('frontend/assets/images/contactus.png') }}" alt="contact">
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
         </div> <!-- end of container -->

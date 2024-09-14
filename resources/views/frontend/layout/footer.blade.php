@@ -38,11 +38,13 @@
     <div class="container">
         <div class="row" data-aos="fade-right">
             <div class="col-lg-3 py-4 py-md-5">
-                <div class="d-flex align-items-center">
-                    <h4 class="">Mirko</h4>
+                <div class="d-flex align-items-center text-center">
+                    <h4 class="">DEWAN ENTERPRISE</h4>
                 </div>
-                <p class="py-3 para-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus animi repudiandae explicabo esse maxime, impedit rem voluptatibus amet error quas.</p>
-                <div class="d-flex">
+                <p class="py-4 para-light">
+                    We offer high-speed internet and reliable connectivity solutions, ensuring seamless online experiences for both residential and business needs.
+                </p>
+                <div class="d-flex justify-content-center">
                     <div class="me-3">
                         <a href="#your-link">
                             <i class="fab fa-facebook-f fa-2x py-2"></i>
@@ -61,74 +63,66 @@
                 </div>
             </div> <!-- end of col -->
 
-            <div class="col-lg-3 py-4 py-md-5">
+            <div class="col-lg-4 py-4 py-md-5 text-center">
                 <div>
                     <h4 class="py-2">Quick Links</h4>
-                    <div class="d-flex align-items-center py-2">
-                        <i class="fas fa-caret-right"></i>
-                        <a href="#about"><p class="ms-3">About</p></a>
-                    </div>
-                    <div class="d-flex align-items-center py-2">
-                        <i class="fas fa-caret-right"></i>
-                        <a href="#"><p class="ms-3">Services</p></a>
-                    </div>
-                    <div class="d-flex align-items-center py-2">
-                        <i class="fas fa-caret-right"></i>
-                        <a href="#"><p class="ms-3">Plans</p></a>
-                    </div>
-                    <div class="d-flex align-items-center py-2">
-                        <i class="fas fa-caret-right"></i>
-                        <a href="#"><p class="ms-3">Contact</p></a>
+                    <div class="d-flex flex-column align-items-center">
+                        <div class="d-flex align-items-center py-2">
+                            <i class="fas fa-caret-right"></i>
+                            <a href="#about"><p class="ms-2">About</p></a>
+                        </div>
+                        <div class="d-flex align-items-center py-2">
+                            <i class="fas fa-caret-right"></i>
+                            <a href="#"><p class="ms-2">Services</p></a>
+                        </div>
+                        <div class="d-flex align-items-center py-2">
+                            <i class="fas fa-caret-right"></i>
+                            <a href="#"><p class="ms-2">Plans</p></a>
+                        </div>
+                        <div class="d-flex align-items-center py-2">
+                            <i class="fas fa-caret-right"></i>
+                            <a href="#"><p class="ms-2">Contact</p></a>
+                        </div>
                     </div>
                 </div>
             </div> <!-- end of col -->
 
-            <div class="col-lg-3 py-4 py-md-5">
+            <div class="col-lg-4 py-4 py-md-5 text-center">
                 <div>
                     <h4 class="py-2">Useful Links</h4>
-                    <div class="d-flex align-items-center py-2">
-                        <i class="fas fa-caret-right"></i>
-                        <a href="privacy.html"><p class="ms-3">Privacy</p></a>
-                        
-                    </div>
-                    <div class="d-flex align-items-center py-2">
-                        <i class="fas fa-caret-right"></i>
-                        <a href="terms.html"><p class="ms-3">Terms</p></a>
-                    </div>
-                    <div class="d-flex align-items-center py-2">
-                        <i class="fas fa-caret-right"></i>
-                        <a href="#your-link"><p class="ms-3">Disclaimer</p></a>
-                    </div>
-                    <div class="d-flex align-items-center py-2">
-                        <i class="fas fa-caret-right"></i>
-                        <a href="#your-link"><p class="ms-3">FAQ</p></a>
+                    <div class="d-flex flex-column align-items-center">
+                        <div class="d-flex align-items-center py-2">
+                            <i class="fas fa-caret-right"></i>
+                            <a href="#your-link"><p class="ms-2">Privacy</p></a>
+                        </div>
+                        <div class="d-flex align-items-center py-2">
+                            <i class="fas fa-caret-right"></i>
+                            <a href="#your-link"><p class="ms-2">Terms</p></a>
+                        </div>
+                        <div class="d-flex align-items-center py-2">
+                            <i class="fas fa-caret-right"></i>
+                            <a href="#your-link"><p class="ms-2">Disclaimer</p></a>
+                        </div>
+                        <div class="d-flex align-items-center py-2">
+                            <i class="fas fa-caret-right"></i>
+                            <a href="#your-link"><p class="ms-2">FAQ</p></a>
+                        </div>
                     </div>
                 </div>
             </div> <!-- end of col -->
 
-            <div class="col-lg-3 py-4 py-md-5">
-                <div class="d-flex align-items-center">
-                    <h4>Newsletter</h4>
-                </div>
-                <p class="py-3 para-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam, ab.</p>
-                <div class="d-flex align-items-center">
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control p-2" placeholder="Enter Email" aria-label="Recipient's email">
-                        <button class="btn-secondary text-light"><i class="fas fa-envelope fa-lg"></i></button>       
-                    </div>
-                </div>
-            </div> <!-- end of col -->
         </div> <!-- end of row -->
     </div> <!-- end of container -->
-</section> <!-- end of footer -->
+</section>
+ <!-- end of footer -->
 
 
 <!-- Bottom -->
 <div class="bottom py-2 text-light" >
     <div class="container d-flex justify-content-between">
         <div>
-            <p>Copyright © Your name</p><br>
-            <p>Distributed by: <a href="https://themewagon.com/">Themewagon</a></p>
+            <p>Copyright © DEWAN ENTERPRISE</p><br>
+            <p>Develop by: <a href="https://workers-den.se/">Worker’s Den</a></p>
         </div>
         <div>
             <i class="fab fa-cc-visa fa-lg p-1"></i>
@@ -142,6 +136,6 @@
 
 <!-- Back To Top Button -->
 <button onclick="topFunction()" id="myBtn">
-    <img src="assets/images/up-arrow.png" alt="alternative">
+    <img src="{{ asset('frontend/assets/images/up-arrow.png') }}" alt="alternative">
 </button>
 <!-- end of back to top button -->
