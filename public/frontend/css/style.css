@@ -69,7 +69,7 @@ li {
 .plans,
 .work,
 .contact {
-	height: 110vh;
+    height: auto;
 	position: relative;
 }
 

@@ -162,61 +162,38 @@
                 </p>
             </div>
             <div class="row gy-4" data-aos="zoom-in">
-                <div class="col-lg-4">
-                    <div class="card bg-transparent px-4">
-                        <h4 class="py-2">BASIC BUNDLE</h4>
-                        <p class="py-3">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        <div class="block d-flex align-items-center">
-                            <p class="pe-2"><i class="far fa-check-circle fa-1x"></i></p>
-                            <p>Lorem ipsum dolor sit amet.</p>
-                        </div>
-                        <div class="block d-flex align-items-center">
-                            <p class="pe-2"><i class="far fa-check-circle fa-1x"></i></p>
-                            <p>Lorem ipsum dolor sit amet.</p>
-                        </div>
-                        <div class="block d-flex align-items-center">
-                            <p class="pe-2"><i class="far fa-check-circle fa-1x"></i></p>
-                            <p>Lorem ipsum dolor sit amet.</p>
-                        </div>
-                        <div class="block d-flex align-items-center">
-                            <p class="pe-2"><i class="far fa-check-circle fa-1x"></i></p>
-                            <p>Lorem ipsum dolor sit amet.</p>
-                        </div>
-                        <h4 class="py-3">$24/Month</h4>
-                        <div class="my-3">
-                            <a class="btn" href="#your-link" >View Plans</a>
+
+                @forelse ($packages as $package )
+                    <div class="col-lg-3">
+                        <div class="card bg-transparent px-4">
+                            <h4 class="py-2">{{ $package->title }}</h4>
+                            {{-- <p class="py-3">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p> --}}
+                            @forelse ($package->packageDetail as $pkDetail )
+                                <div class="block d-flex align-items-center">
+                                    <p class="pe-2"><i class="far fa-check-circle fa-1x"></i></p>
+                                    <p>{{ $pkDetail->title }}</p>
+                                </div>
+                            @empty
+                                <div class="block d-flex align-items-center">
+                                    <p class="pe-2"><i class="far fa-check-circle fa-1x"></i></p>
+                                    <p>No Details Found</p>
+                                </div>
+                            @endforelse
+                            <h4 class="py-3">&#2547; {{ $package->amount}}/Month</h4>
+                            <div class="my-3">
+                                <a class="btn" href="#contact" >View Plans</a>
+                            </div>
                         </div>
                     </div>
-                </div>
+                @empty
+                    <h3>No Package Found</h3>
+                @endforelse
 
-                <div class="col-lg-4">
-                    <div class="card bg-transparent px-4">
-                        <h4 class="py-2">BUSINESS BUNDLE</h4>
-                        <p class="py-3">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        <div class="block d-flex align-items-center">
-                            <p class="pe-2"><i class="far fa-check-circle fa-1x"></i></p>
-                            <p>Lorem ipsum dolor sit amet.</p>
-                        </div>
-                        <div class="block d-flex align-items-center">
-                            <p class="pe-2"><i class="far fa-check-circle fa-1x"></i></p>
-                            <p>Lorem ipsum dolor sit amet.</p>
-                        </div>
-                        <div class="block d-flex align-items-center">
-                            <p class="pe-2"><i class="far fa-check-circle fa-1x"></i></p>
-                            <p>Lorem ipsum dolor sit amet.</p>
-                        </div>
-                        <div class="block d-flex align-items-center">
-                            <p class="pe-2"><i class="far fa-check-circle fa-1x"></i></p>
-                            <p>Lorem ipsum dolor sit amet.</p>
-                        </div>
-                        <h4 class="py-3">$99/Month</h4>
-                        <div class="my-3">
-                            <a class="btn" href="#your-link" >View Plans</a>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="col-lg-4">
+
+
+
+              {{--  <div class="col-lg-4">
                     <div class="card bg-transparent px-4" >
                         <h4 class="py-2">PREMIUM BUNDLE</h4>
                         <p class="py-3">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
@@ -241,7 +218,8 @@
                             <a class="btn" href="#your-link" >View Plans</a>
                         </div>
                     </div>
-                </div>
+                </div> --}}
+
             </div> <!-- end of row -->
         </div> <!-- end of container -->
     </section> <!-- end of plans -->

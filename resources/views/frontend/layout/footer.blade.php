@@ -6,21 +6,21 @@
                     <div class="p-2"><i class="far fa-map fa-3x"></i></div>
                     <div class="ms-2">
                         <h6>ADDRESS</h6>
-                        <p>Teuku Umar ST. 1919</p>
+                        <p>Mulatol Bazzer, Rangpur City, Rangpur -5400</p>
                     </div>
                 </div>
                 <div class="col-lg-3 d-flex align-items-center" >
                     <div class="p-2"><i class="fas fa-mobile-alt fa-3x"></i></div>
                     <div class="ms-2">
                         <h6>CALL FOR QUERY</h6>
-                        <p>(800) 265  216 2020</p>
+                        <p>01891159120-21,01891159131</p>
                     </div>
                 </div>
                 <div class="col-lg-3 d-flex align-items-center" >
                     <div class="p-2"><i class="far fa-envelope fa-3x"></i></div>
                     <div class="ms-2">
                         <h6>SEND US MESSAGE</h6>
-                        <p>infodemofile@example.com</p>
+                        <p>dewanenterprise55@gmail.com</p>
                     </div>
                 </div>
                 <div class="col-lg-3 d-flex align-items-center" >
@@ -33,6 +33,29 @@
             </div> <!-- end of row -->
         </div> <!-- end of container -->
     </section> <!-- end of location -->
+
+
+    <section class="location text-light py-5">
+        <div class="container" data-aos="zoom-in">
+
+            <div class="row">
+                <h3 class="text-center">Service Area</h3>
+                @forelse ($areas as $area)
+                    <div class="col-lg-2 d-flex align-items-center">
+                        <div class="p-2"><i class="fas fa-map-marked"></i></div>
+                        <div class="ms-2">
+                           <h6 class="text-uppercase">{{ $area->name }}</h6>
+                        </div>
+                    </div>
+                @empty
+
+                @endforelse
+
+
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </section>
+
   <!-- Footer -->
   <section class="footer text-light">
     <div class="container">
@@ -46,11 +69,11 @@
                 </p>
                 <div class="d-flex justify-content-center">
                     <div class="me-3">
-                        <a href="#your-link">
+                        <a href="https://www.facebook.com/DB0121/?_rdr" target="_blank">
                             <i class="fab fa-facebook-f fa-2x py-2"></i>
                         </a>
                     </div>
-                    <div class="me-3">
+                    {{-- <div class="me-3">
                         <a href="#your-link">
                             <i class="fab fa-twitter fa-2x py-2"></i>
                         </a>
@@ -59,7 +82,7 @@
                         <a href="#your-link">
                             <i class="fab fa-instagram fa-2x py-2"></i>
                         </a>
-                    </div>
+                    </div> --}}
                 </div>
             </div> <!-- end of col -->
 
