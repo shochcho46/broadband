@@ -7,5 +7,7 @@
 <link href="{{asset('frontend/css/swiper.css')}}" rel="stylesheet">
 <link href="{{asset('frontend/css/style.css')}}" rel="stylesheet">
 
+
 <!-- Favicon -->
 <link rel="icon" href="{{asset('frontend/assets/images/favicon.png')}}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">

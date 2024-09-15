@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Area;
 use App\Models\Country;
 use App\Models\Gender;
+use App\Models\Package;
 use App\Models\User;
 use App\Models\UserDetail;
 use Illuminate\Http\Request;
@@ -22,7 +24,10 @@ class HomeController extends Controller
     public function home(Request $request)
     {
 
-        return view('frontend.pages.home');
+        $areas = Area::all();
+        $packages = Package::all();
+        return view('frontend.pages.home',compact('areas','packages'));
+
     }
 
     public function dashboard(Request $request)

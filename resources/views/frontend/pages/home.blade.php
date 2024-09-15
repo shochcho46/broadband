@@ -263,29 +263,76 @@
                                 Complete this form to request a new internet connection for your home.
                             </p>
                         </div>
-                        <div>
 
+                        <form action="{{ route('admin-inquire.store') }}" method="post" enctype="multipart/form-data">
+                            @csrf
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group py-2">
+                                        <input type="text" name="name" class="form-control form-control-input" id="exampleFormControlInput1" placeholder="Enter name" required>
+                                        @error('name')
+                                            <span class="text-danger">{{ $message }}</span>
+                                        @enderror
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group py-2">
+                                        <input type="text" name="mobile" class="form-control form-control-input" id="exampleFormControlInput2" placeholder="Enter phone number" required>
+                                        @error('mobile')
+                                            <span class="text-danger">{{ $message }}</span>
+                                        @enderror
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group py-1">
+                                        <select class="form-control form-control-input form-select" aria-label="Default select example" name="type" required>
+                                            <option value="" disabled selected>Select Type</option>
+                                            <option value="new">New</option>
+                                            <option value="upgrade">Upgrade</option>
+                                        </select>
+                                        @error('type')
+                                            <span class="text-danger">{{ $message }}</span>
+                                        @enderror
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group py-1">
+                                        <select class="form-control form-control-input form-select" aria-label="Default select example" name="package_id" required>
+                                            <option value="" disabled selected>Select Package</option>
+                                            @forelse ($packages as $package)
+                                                <option value="{{ $package->id }}">{{ $package->title }}</option>
+                                            @empty
+                                                <option value="">No Package Found</option>
+                                            @endforelse
+                                        </select>
 
-                            <div class="form-group py-2">
-                                <input type="text" class="form-control form-control-input" id="exampleFormControlInput1" placeholder="Enter name">
+                                        @error('package_id')
+                                            <span class="text-danger">{{ $message }}</span>
+                                        @enderror
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group py-1">
+                                        <input type="email" name="email" class="form-control form-control-input" id="exampleFormControlInput3" placeholder="Enter email (optional)">
+                                        @error('email')
+                                            <span class="text-danger">{{ $message }}</span>
+                                        @enderror
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group py-2">
+                                        <textarea class="form-control form-control-input" name="message" id="exampleFormControlTextarea1" rows="3" placeholder="Message/Address"></textarea>
+                                        @error('message')
+                                            <span class="text-danger">{{ $message }}</span>
+                                        @enderror
+                                    </div>
+                                </div>
+                                <div class="col-md-12 my-3">
+                                    <button type="submit" class="btn form-control-submit-button">Submit</button>
+                                </div>
                             </div>
+                        </form>
 
-
-                            <div class="form-group py-2">
-                                <input type="email" class="form-control form-control-input" id="exampleFormControlInput2" placeholder="Enter phone number">
-                            </div>
-
-
-                            <div class="form-group py-1">
-                                <input type="email" class="form-control form-control-input" id="exampleFormControlInput3" placeholder="Enter email">
-                            </div>
-                            <div class="form-group py-2">
-                                <textarea class="form-control form-control-input" id="exampleFormControlTextarea1" rows="6" placeholder="Message"></textarea>
-                            </div>
-                        </div>
-                        <div class="my-3">
-                            <a class="btn form-control-submit-button" href="#your-link">Submit</a>
-                        </div>
                     </div> <!-- end of div -->
                 </div> <!-- end of col -->
                 <div class="col-lg-6 d-flex align-items-center" data-aos="fade-down">

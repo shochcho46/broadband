@@ -4,6 +4,20 @@
 {{-- <script src="{{asset('js/adminlte.min.js')}}"></script> --}}
 <script src="{{asset('bootstrap/js/bootstrap.min.js')}}"></script>
 <script src="{{asset('js/adminlte.js')}}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+    <script>
+        @if(Session::has('success'))
+            toastr.success("{{ Session::get('success') }}");
+        @elseif(Session::has('error'))
+            toastr.error("{{ Session::get('error') }}");
+        @elseif(Session::has('info'))
+            toastr.info("{{ Session::get('info') }}");
+        @elseif(Session::has('warning'))
+            toastr.warning("{{ Session::get('warning') }}");
+        @endif
+    </script>
 <script>
     const SELECTOR_SIDEBAR_WRAPPER = ".sidebar-wrapper";
     const Default = {
