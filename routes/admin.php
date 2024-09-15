@@ -26,6 +26,8 @@ Route::prefix('admin')->group(function () {
 
         Route::controller(AdminController::class)->group(function () {
             Route::get('dashboard', 'dashboard')->name('admin.dashboard');
+            Route::get('admin/profile', 'getProfile')->name('admin.getProfile');
+            Route::put('admin/profile/{admin}/update', 'updateProfile')->name('admin.updateProfile');
             Route::get('logout', 'logout')->name('admin.logout');
 
         });

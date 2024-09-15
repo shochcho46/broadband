@@ -85,6 +85,49 @@ class AdminController extends Controller
         return view('admin.dashboard',compact('area','package','inquiry','visitor'));
     }
 
+    public function getProfile()
+    {
+        $user = Auth::guard('admin')->user();
+        return view('admin.profile.create',compact('user'));
+    }
+
+    public function updateProfile(Request $request, Admin $admin)
+    {
+
+        $validated = $request->validate([
+            'name' => 'required',
+            'email' => 'required|email|unique:admins,email,' . $admin->id,
+            'password' => 'required|confirmed',  // Make password nullable for updates
+            'password_confirmation' => 'required',
+            'current_password' => 'required|current_password:admin',
+            'phone' => [
+                'required',
+                'regex:/^[0-9+]+$/',
+                'unique:admins,phone,' . $admin->id,
+                (new Phone)->country(['BD'])
+            ],
+        ],
+        [
+            'phone.regex' => 'The phone number must contain only English digits (0-9).',
+            'phone.required' => 'The phone number is required',
+        ]
+    );
+        $admin->update([
+            'name' => $validated['name'],
+            'email' => $validated['email'],
+            'phone' => $validated['phone'],
+            'password' => Hash::make($request->password),
+        ]);
+
+        if ($request->hasFile('profile')) {
+            $admin->clearMediaCollection('profile');
+            $admin->addMedia($request->profile)->toMediaCollection('profile');
+        }
+
+        $user = $admin;
+        return redirect()->route('admin.getProfile');
+    }
+
 
     public function logout(Request $request): RedirectResponse
     {
