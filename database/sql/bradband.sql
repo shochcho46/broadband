@@ -1,16 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Sep 15, 2024 at 11:08 AM
+-- Generation Time: Sep 15, 2024 at 06:27 PM
 -- Server version: 8.0.30
--- PHP Version: 8.3.6
+-- PHP Version: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
-
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -19,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `broadband`
+-- Database: `bradband`
 --
 
 -- --------------------------------------------------------
@@ -48,7 +47,7 @@ CREATE TABLE `admins` (
 --
 
 INSERT INTO `admins` (`id`, `name`, `email`, `phone`, `status`, `email_verified_at`, `mobile_verified_at`, `otp`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'Supper Admin', 'admin@gmail.com', '01740303508', 1, NULL, NULL, NULL, '$2y$12$9Euaa0QWFH0WUVMqcgyo1unTDcXdddSdYNGoPGL1AZfpKgTtZqzrq', 'oKpqY3dBL3ddQ4OJWtHF7mNkFJjtV9uKML3BADV1D337MK0ea5k4kx5M5Riv', '2024-08-27 06:26:43', '2024-08-27 06:26:43');
+(1, 'Supper Admin', 'admin@gmail.com', '01740303508', 1, NULL, NULL, NULL, '$2y$12$dq663hPs9hFzykJs.EwD8ew2KqXnMFFhXsiQuqxyuUMJUemSMSx4u', 'tfhXwnA1ilv2hunbrKS8ilR15zMayTjqhmGBkfKQydVcKe8BEhHzZ27emhZ6', '2024-08-27 06:26:43', '2024-09-15 11:06:45');
 
 -- --------------------------------------------------------
 
@@ -58,7 +57,7 @@ INSERT INTO `admins` (`id`, `name`, `email`, `phone`, `status`, `email_verified_
 
 CREATE TABLE `areas` (
   `id` bigint UNSIGNED NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -68,7 +67,41 @@ CREATE TABLE `areas` (
 --
 
 INSERT INTO `areas` (`id`, `name`, `created_at`, `updated_at`) VALUES
-(3, 'Mulatol', '2024-09-15 02:23:54', '2024-09-15 02:23:54');
+(3, 'Munshipara', '2024-09-15 02:23:54', '2024-09-15 08:40:00'),
+(4, 'Mulatol', '2024-09-15 08:11:04', '2024-09-15 08:39:39'),
+(5, 'Guratipara', '2024-09-15 08:40:20', '2024-09-15 08:40:20'),
+(6, 'Goneshpur', '2024-09-15 08:40:49', '2024-09-15 08:40:49'),
+(7, 'Tarminal', '2024-09-15 08:41:12', '2024-09-15 08:41:12'),
+(8, 'Keranipara', '2024-09-15 08:41:30', '2024-09-15 08:41:30'),
+(9, 'Textail Mor', '2024-09-15 08:42:06', '2024-09-15 08:42:06'),
+(10, 'Radhabollab', '2024-09-15 08:42:25', '2024-09-15 08:42:25'),
+(11, 'Kachari Bazer', '2024-09-15 08:43:04', '2024-09-15 08:43:04'),
+(12, 'Honumantola', '2024-09-15 08:43:33', '2024-09-15 08:43:33'),
+(13, 'Jummapara', '2024-09-15 08:43:53', '2024-09-15 08:43:53'),
+(14, 'Payra Cottor', '2024-09-15 08:44:59', '2024-09-15 08:44:59'),
+(15, 'Kamal Kasna', '2024-09-15 08:45:16', '2024-09-15 08:45:16'),
+(16, 'Gupto Para', '2024-09-15 08:45:40', '2024-09-15 08:45:40'),
+(17, 'Shapla Cottor', '2024-09-15 08:46:06', '2024-09-15 08:46:06'),
+(18, 'Adorsho Para', '2024-09-15 08:46:35', '2024-09-15 08:46:35'),
+(19, 'Kamar Para', '2024-09-15 08:49:27', '2024-09-15 08:49:27'),
+(20, 'Babukha', '2024-09-15 09:19:55', '2024-09-15 09:19:55'),
+(21, 'Chartola Mor', '2024-09-15 09:20:21', '2024-09-15 09:20:21'),
+(22, 'Sen Para', '2024-09-15 09:20:35', '2024-09-15 09:20:35'),
+(23, 'Jahaz Company Mor', '2024-09-15 09:20:47', '2024-09-15 09:21:06'),
+(24, 'Bokultola', '2024-09-15 09:21:23', '2024-09-15 09:21:23'),
+(25, 'Dhap', '2024-09-15 09:21:52', '2024-09-15 09:21:52'),
+(26, 'Kotki Para', '2024-09-15 09:22:01', '2024-09-15 09:22:01'),
+(27, 'RK Road Nazrul Pathagar', '2024-09-15 09:22:43', '2024-09-15 09:22:43'),
+(28, 'Santi Para', '2024-09-15 09:23:08', '2024-09-15 09:23:08'),
+(29, 'Pal Para', '2024-09-15 09:23:18', '2024-09-15 09:23:18'),
+(30, 'New Engineer Para', '2024-09-15 09:23:39', '2024-09-15 09:23:39'),
+(31, 'Grand Hotel Mor', '2024-09-15 09:23:50', '2024-09-15 09:23:50'),
+(32, 'Medical Mor', '2024-09-15 09:24:24', '2024-09-15 09:24:24'),
+(33, 'Jolkor', '2024-09-15 09:24:47', '2024-09-15 09:24:47'),
+(34, 'Center Road', '2024-09-15 09:24:57', '2024-09-15 09:24:57'),
+(35, 'Betpotti', '2024-09-15 09:25:17', '2024-09-15 09:25:17'),
+(36, 'Supper Market', '2024-09-15 09:25:27', '2024-09-15 09:25:27'),
+(37, 'Abhawa Office Road', '2024-09-15 09:25:51', '2024-09-15 09:25:51');
 
 -- --------------------------------------------------------
 
@@ -162,12 +195,12 @@ CREATE TABLE `genders` (
 
 CREATE TABLE `inquaries` (
   `id` bigint UNSIGNED NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `mobile` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `mobile` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `package_id` bigint UNSIGNED NOT NULL,
-  `type` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'new,upgrade',
-  `message` mediumtext COLLATE utf8mb4_unicode_ci,
+  `type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'new,upgrade',
+  `message` mediumtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -245,6 +278,13 @@ CREATE TABLE `media` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `media`
+--
+
+INSERT INTO `media` (`id`, `model_type`, `model_id`, `uuid`, `collection_name`, `name`, `file_name`, `mime_type`, `disk`, `conversions_disk`, `size`, `manipulations`, `custom_properties`, `generated_conversions`, `responsive_images`, `order_column`, `created_at`, `updated_at`) VALUES
+(13, 'App\\Models\\Admin', 1, '3d339dae-5d78-46bc-a44a-9a4db3ea304c', 'profile', 'party-mix-2-768x819', 'party-mix-2-768x819.png', 'image/png', 'public', 'public', 239667, '[]', '[]', '[]', '[]', 1, '2024-09-15 11:06:45', '2024-09-15 11:06:45');
+
 -- --------------------------------------------------------
 
 --
@@ -312,11 +352,11 @@ CREATE TABLE `model_has_roles` (
 --
 
 CREATE TABLE `notifications` (
-  `id` char(36) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `type` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `notifiable_type` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `id` char(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `notifiable_type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `notifiable_id` bigint UNSIGNED NOT NULL,
-  `data` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `data` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `read_at` timestamp NULL DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -339,8 +379,8 @@ INSERT INTO `notifications` (`id`, `type`, `notifiable_type`, `notifiable_id`, `
 
 CREATE TABLE `packages` (
   `id` bigint UNSIGNED NOT NULL,
-  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `amount` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `amount` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -350,7 +390,10 @@ CREATE TABLE `packages` (
 --
 
 INSERT INTO `packages` (`id`, `title`, `amount`, `created_at`, `updated_at`) VALUES
-(1, 'Talent', '1000', '2024-09-15 00:33:01', '2024-09-15 00:33:01');
+(1, 'Talent', '1000', '2024-09-15 00:33:01', '2024-09-15 00:33:01'),
+(3, 'Turbo', '1500', '2024-09-15 08:17:32', '2024-09-15 08:17:32'),
+(4, 'Ultra', '2000', '2024-09-15 08:18:30', '2024-09-15 08:18:30'),
+(5, 'Universal', '2500', '2024-09-15 08:21:35', '2024-09-15 08:21:35');
 
 -- --------------------------------------------------------
 
@@ -360,7 +403,7 @@ INSERT INTO `packages` (`id`, `title`, `amount`, `created_at`, `updated_at`) VAL
 
 CREATE TABLE `package_details` (
   `id` bigint UNSIGNED NOT NULL,
-  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `package_id` bigint UNSIGNED NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -371,10 +414,26 @@ CREATE TABLE `package_details` (
 --
 
 INSERT INTO `package_details` (`id`, `title`, `package_id`, `created_at`, `updated_at`) VALUES
-(17, 'lore ipsum', 1, '2024-09-15 01:36:40', '2024-09-15 01:36:40'),
-(18, 'Internet 30/30 Mbps', 1, '2024-09-15 01:36:40', '2024-09-15 01:36:40'),
-(19, 'No Fair Usage Policy', 1, '2024-09-15 01:36:40', '2024-09-15 01:36:40'),
-(20, '24/7 Suppos', 1, '2024-09-15 01:36:40', '2024-09-15 01:36:40');
+(24, 'Internet 30/30 Mbps', 1, '2024-09-15 08:14:15', '2024-09-15 08:14:15'),
+(25, 'Free Real IP (IPv4 & IPv6)', 1, '2024-09-15 08:14:15', '2024-09-15 08:14:15'),
+(26, 'Unlimited Data Usages', 1, '2024-09-15 08:14:15', '2024-09-15 08:14:15'),
+(27, 'No Fair Usage Policy', 1, '2024-09-15 08:14:15', '2024-09-15 08:14:15'),
+(28, '24/7 Support', 1, '2024-09-15 08:14:15', '2024-09-15 08:14:15'),
+(29, 'Internet 40/40 Mbps', 3, '2024-09-15 08:17:32', '2024-09-15 08:17:32'),
+(30, 'Free Real IP (IPv4 & IPv6)', 3, '2024-09-15 08:17:32', '2024-09-15 08:17:32'),
+(31, 'Unlimited Data Usages', 3, '2024-09-15 08:17:32', '2024-09-15 08:17:32'),
+(32, 'No Fair Usage Policy', 3, '2024-09-15 08:17:32', '2024-09-15 08:17:32'),
+(33, '24/7 Support', 3, '2024-09-15 08:17:32', '2024-09-15 08:17:32'),
+(34, 'Internet 50/50 Mbps', 4, '2024-09-15 08:18:30', '2024-09-15 08:18:30'),
+(35, 'Free Real IP (IPv4 & IPv6)', 4, '2024-09-15 08:18:30', '2024-09-15 08:18:30'),
+(36, 'Unlimited Data Usages', 4, '2024-09-15 08:18:30', '2024-09-15 08:18:30'),
+(37, 'No Fair Usage Policy', 4, '2024-09-15 08:18:30', '2024-09-15 08:18:30'),
+(38, '24/7 Support', 4, '2024-09-15 08:18:30', '2024-09-15 08:18:30'),
+(39, 'Internet 60/60 Mbps', 5, '2024-09-15 08:21:35', '2024-09-15 08:21:35'),
+(40, 'Free Real IP (IPv4 & IPv6)', 5, '2024-09-15 08:21:35', '2024-09-15 08:21:35'),
+(41, 'Unlimited Data Usages', 5, '2024-09-15 08:21:35', '2024-09-15 08:21:35'),
+(42, 'No Fair Usage Policy', 5, '2024-09-15 08:21:35', '2024-09-15 08:21:35'),
+(43, '24/7 Support', 5, '2024-09-15 08:21:35', '2024-09-15 08:21:35');
 
 -- --------------------------------------------------------
 
@@ -751,7 +810,7 @@ ALTER TABLE `admins`
 -- AUTO_INCREMENT for table `areas`
 --
 ALTER TABLE `areas`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
 -- AUTO_INCREMENT for table `countries`
@@ -793,7 +852,7 @@ ALTER TABLE `jobs`
 -- AUTO_INCREMENT for table `media`
 --
 ALTER TABLE `media`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `migrations`
@@ -805,13 +864,13 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `packages`
 --
 ALTER TABLE `packages`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `package_details`
 --
 ALTER TABLE `package_details`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 
 --
 -- AUTO_INCREMENT for table `permissions`

@@ -16,7 +16,9 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 use Laravel\Socialite\Facades\Socialite;
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Redirect;
+
 
 class HomeController extends Controller
 {
@@ -213,5 +215,27 @@ class HomeController extends Controller
         $request->session()->regenerateToken();
 
         return Redirect::route('login');
+    }
+
+    public function artisanCmd()
+    {
+        Artisan::call('storage:link');
+
+        // Clear the configuration cache
+        Artisan::call('config:clear');
+
+        // Clear the application cache
+        Artisan::call('cache:clear');
+
+        // Clear the route cache
+        Artisan::call('route:clear');
+
+        // Clear the compiled view files
+        Artisan::call('view:clear');
+
+        // Optimize the application
+        Artisan::call('optimize:clear');
+
+        return response()->json(['status' => 'Maintenance commands executed successfully']);
     }
 }
