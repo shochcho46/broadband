@@ -4,8 +4,11 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Admin;
+use App\Models\Area;
 use App\Models\Country;
 use App\Models\Gender;
+use App\Models\Inquary;
+use App\Models\Package;
 use App\Models\User;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -14,6 +17,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Redirect;
 use Propaganistas\LaravelPhone\PhoneNumber;
 use Propaganistas\LaravelPhone\Rules\Phone;
+use Illuminate\Support\Facades\Cache;
 
 class AdminController extends Controller
 {
@@ -74,8 +78,11 @@ class AdminController extends Controller
     public function dashboard()
 
     {
-
-        return view('admin.dashboard');
+        $area = Area::count();
+        $package = Package::count();
+        $inquiry = Inquary::count();
+        $visitor = Cache::get('unique_visitor_count', 0);
+        return view('admin.dashboard',compact('area','package','inquiry','visitor'));
     }
 
 

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Middleware\AdminGuard;
+use App\Http\Middleware\TrackUniqueVisitors;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
@@ -26,7 +27,7 @@ return Application::configure(basePath: dirname(__DIR__))
     )
     ->withMiddleware(function (Middleware $middleware) {
         $middleware->alias([
-
+            'visitor' => TrackUniqueVisitors::class
         ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {
