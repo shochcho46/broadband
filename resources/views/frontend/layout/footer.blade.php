@@ -35,11 +35,11 @@
     </section> <!-- end of location -->
 
 
-    <section class="location text-light py-5">
+    <section class="location text-light py-5" id="coverage">
         <div class="container" data-aos="zoom-in">
 
             <div class="row">
-                <h3 class="text-center">Service Area</h3>
+                <h3 class="text-center">Coverage Area</h3>
                 @forelse ($areas as $area)
                     <div class="col-lg-2 d-flex align-items-center">
                         <div class="p-2"><i class="fas fa-map-marked"></i></div>
@@ -62,7 +62,7 @@
         <div class="row" data-aos="fade-right">
             <div class="col-lg-3 py-4 py-md-5">
                 <div class="d-flex align-items-center text-center">
-                    <h4 class="">DEWAN ENTERPRISE</h4>
+                    <h4 class="">DEWAN BROADBAND</h4>
                 </div>
                 <p class="py-4 para-light">
                     We offer high-speed internet and reliable connectivity solutions, ensuring seamless online experiences for both residential and business needs.
@@ -144,7 +144,7 @@
 <div class="bottom py-2 text-light" >
     <div class="container d-flex justify-content-between">
         <div>
-            <p>Copyright © DEWAN ENTERPRISE</p><br>
+            <p>Powered By © DEWAN ENTERPRISE</p><br>
             <p>Develop by: <a href="https://workers-den.se/">Worker’s Den</a></p>
         </div>
         <div>

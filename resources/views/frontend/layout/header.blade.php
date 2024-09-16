@@ -7,7 +7,7 @@
          {{-- <a class="navbar-brand img-fluid" href="index.html"><img src="{{ asset('frontend/assets/images/newlogo.png') }}" alt="alternative"></a> --}}
 
         <!-- Text Logo - Use this if you don't have a graphic logo -->
-        <a class="navbar-brand logo-text" href="index.html">DEWAN ENTERPRISE</a>
+        <a class="navbar-brand logo-text" href="index.html">DEWAN BROADBAND</a>
 
         <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -25,7 +25,10 @@
                     <a class="nav-link" href="#services">Services</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#plans">Plans</a>
+                    <a class="nav-link" href="#plans">Package</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#coverage">Coverage Area</a>
                 </li>
                 {{-- <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false" href="#">Drop</a>

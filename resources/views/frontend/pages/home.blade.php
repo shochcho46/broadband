@@ -12,7 +12,7 @@
             <h1 class="headline">Best <span class="home_text">Broadband</span><br>Internet Plans For You</h1>
             <p class="para para-light py-3">
                 Finding the best broadband internet plan is essential for both home and business users.
-                DewanEnterprise offers affordable, high-speed plans tailored to your needs.
+                DEWAN BROADBAND offers affordable, high-speed plans tailored to your needs.
                 Whether you choose Wi-Fi for wireless convenience or LAN for ultra-reliable performance,
                 we ensure seamless connectivity at all times.
             </p>
@@ -155,7 +155,7 @@
     <section class="plans d-flex align-items-center py-5" id="plans">
         <div class="container text-light" >
             <div class="text-center pb-4">
-                <p>OUR PLANS</p>
+                <p>OUR PACKAGES</p>
                 <h2 class="py-2">Explore unlimited possibilities</h2>
                 <p class="para-light">
                     Our data packages offer flexible, high-speed internet plans tailored to your needs. Enjoy unlimited data options with competitive pricing, ensuring seamless browsing, streaming, and online activities.
