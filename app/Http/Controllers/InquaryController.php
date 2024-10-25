@@ -86,8 +86,6 @@ class InquaryController extends Controller
         ]);
         $ids = explode(',', $request->input('selected_ids'));
         Inquary::whereIn('id', $ids)->delete();
-
-        // Redirect back with a success message
         return redirect()->route('admin-inquire.index')->with('error', 'Selected inquiries deleted successfully.');
     }
 }
