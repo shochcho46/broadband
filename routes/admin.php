@@ -57,6 +57,7 @@ Route::prefix('admin')->group(function () {
             Route::get('inquire/see/all', 'seeAllNotification')->name('admin-inquire.seeAllNotification');
             Route::get('inquire/single/{notificationID}', 'seeSingleNotification')->name('admin-inquire.seeSingleNotification');
             Route::delete('inquire/{inquary}/destroy', 'destroy')->name('admin-inquire.destroy');
+            Route::delete('inquire/bulk-delete', 'bulkDelete')->name('admin-inquire.bulk-delete');
         });
 
     });

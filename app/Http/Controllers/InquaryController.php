@@ -18,11 +18,11 @@ class InquaryController extends Controller
 
         if ($request->has('search')) {
             $searchTerm = $request->search;
-            $query->where(function($q) use ($searchTerm) {
+            $query->where(function ($q) use ($searchTerm) {
                 $q->where('name', 'like', '%' . $searchTerm . '%')
-                  ->orWhere('email', 'like', '%' . $searchTerm . '%')
-                  ->orWhere('mobile', 'like', '%' . $searchTerm . '%')
-                  ->orWhere('type', 'like', '%' . $searchTerm . '%');
+                    ->orWhere('email', 'like', '%' . $searchTerm . '%')
+                    ->orWhere('mobile', 'like', '%' . $searchTerm . '%')
+                    ->orWhere('type', 'like', '%' . $searchTerm . '%');
             });
         }
         $datas = $query->orderByDesc('id')->paginate(15);
@@ -44,27 +44,28 @@ class InquaryController extends Controller
     public function seeSingleNotification($notificationID)
     {
         $admin = Auth::guard('admin')->user();
-        $notifyData = $admin->notifications->where('id',$notificationID)->first();
+        $notifyData = $admin->notifications->where('id', $notificationID)->first();
         $notifyData->markAsRead();
         $query = Inquary::query();
         $query = $query->with('package');
-        $datas = Inquary::with('package')->where('id',$notifyData->data['id'])->orderByDesc('id')->paginate(15);
+        $datas = Inquary::with('package')->where('id', $notifyData->data['id'])->orderByDesc('id')->paginate(15);
         return view('admin.inquiry.index', compact('datas'));
     }
 
     public function store(Request $request)
     {
-        $validated = $request->validate([
-            'name' => ['bail','required'],
-            'mobile' => ['bail','required'],
-            'type' => ['bail','required'],
-            'package_id' => ['bail','required'],
-            'email' => "",
-            'message' => "",
-        ],
+        $validated = $request->validate(
+            [
+                'name' => ['bail', 'required'],
+                'mobile' => ['bail', 'required'],
+                'type' => ['bail', 'required'],
+                'package_id' => ['bail', 'required'],
+                'email' => "",
+                'message' => "",
+            ],
 
         );
-        $inquiry =Inquary::create( $validated);
+        $inquiry = Inquary::create($validated);
         $admin = Admin::all();
         Notification::send($admin, new InquiryNotification($inquiry));
         return redirect()->route('home')->with('success', 'Your inquire added successfully');
@@ -76,4 +77,17 @@ class InquaryController extends Controller
         return redirect()->route('admin-inquire.index')->with('error', 'inquiry deleted successfully');
     }
 
+
+    public function bulkDelete(Request $request)
+    {
+
+        $request->validate([
+            'selected_ids' => 'required|string'
+        ]);
+        $ids = explode(',', $request->input('selected_ids'));
+        Inquary::whereIn('id', $ids)->delete();
+
+        // Redirect back with a success message
+        return redirect()->route('admin-inquire.index')->with('error', 'Selected inquiries deleted successfully.');
+    }
 }

@@ -43,6 +43,16 @@
 
                                 </form>
                             </div>
+
+                            <div class="col-md-6 text-end">
+                                <button class="btn btn-danger" onclick="confirmBulkDelete()">Delete Selected</button>
+                                <form id="bulk-delete-form" action="{{ route('admin-inquire.bulk-delete') }}" method="POST" style="display: none;">
+                                    @csrf
+                                    @method('DELETE')
+                                    <input type="hidden" name="selected_ids" id="selected_ids">
+                                </form>
+                            </div>
+
                         </div>
                     </div> <!-- /.card-header -->
                     <div class="card-body p-0">
@@ -50,6 +60,8 @@
                         <table class="table table-striped">
                             <thead>
                                 <tr>
+
+                                    <th style="width: 10px"><input type="checkbox" id="select-all"></th>
                                     <th style="width: 10px">#</th>
                                     <th>Name</th>
                                     <th>Email</th>
@@ -63,6 +75,7 @@
                             <tbody>
                                 @forelse ($datas as $key => $value )
                                     <tr class="align-middle">
+                                        <td><input type="checkbox" class="select-item" value="{{ $value->id }}"></td>
                                         <td>{{ $datas->firstItem() + $key }}</td>
                                         <td>{{$value->name}}</td>
                                         <td>{{$value->email}}</td>
@@ -117,6 +130,25 @@
 <script>
     function confirmDelete(id) {
         document.getElementById('delete-form-' + id).submit();
+    }
+
+
+      // Select All and Individual Selection
+      document.getElementById('select-all').addEventListener('change', function() {
+        document.querySelectorAll('.select-item').forEach(item => {
+            item.checked = this.checked;
+        });
+    });
+
+    // Collect selected IDs and submit for bulk delete
+    function confirmBulkDelete() {
+        const selectedIds = Array.from(document.querySelectorAll('.select-item:checked')).map(checkbox => checkbox.value);
+        if (selectedIds.length > 0) {
+            document.getElementById('selected_ids').value = selectedIds.join(',');
+            document.getElementById('bulk-delete-form').submit();
+        } else {
+            alert('No items selected.');
+        }
     }
 </script>
 @endpush
